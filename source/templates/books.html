@@ -1,0 +1,12 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h2> Books List </h2>
+  <hr>
+  {% for book in books %}
+  <p>
+    {{ book.title }}
+  </p>
+  {% endfor %}
+{% endblock %}
