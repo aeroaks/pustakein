@@ -4,9 +4,19 @@
 {% block content %}
   <h2> Books List </h2>
   <hr>
-  {% for book in books %}
-  <p>
-    {{ book.title }}
-  </p>
-  {% endfor %}
+  <table border="1">
+    <tr>
+    <th>Book</th><th>Author</th>
+    </tr>
+    {% for book in bookList.items %}
+    <tr>
+    <td>{{ book.title }}</td><td>{{ book.author_sort }}</td>
+    </tr>
+    {% endfor %}
+    {% if bookList.has_prev %}<a href="{{ url_for('books', page=bookList.prev_num) }}">&lt;&lt; Previous</a>
+    {% else %}&lt;&lt; Previous{% endif %} |
+    {% if bookList.has_next %}<a href="{{ url_for('books', page=bookList.next_num) }}"> Next &gt;&gt;</a>
+    {% else %} Next &gt;&gt;{% endif %}
+  </table>
+
 {% endblock %}
