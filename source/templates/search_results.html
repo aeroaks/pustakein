@@ -1,0 +1,18 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h3> Search results for "{{ query }}": </h3>
+
+  <table class="table table-striped table-condensed">
+    <tr>
+    <th>Book</th><th>Author</th>
+    </tr>
+    {% for item in results %}
+    <tr>
+    <td>{{ item.title }}</td><td>{{ item.author_sort }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}
