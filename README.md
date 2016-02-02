@@ -1,7 +1,11 @@
-Pustakein
+# pustakein
 --------
+Ebook Library (Calibre) Frontend in Flask
 
 ## TODO
-* Deploy to RPi
 * Improve Search
 * Popup - book info + cover page
+=======
+
+
+

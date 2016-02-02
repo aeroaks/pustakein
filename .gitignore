@@ -1,6 +1,6 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
 source/__pycache__/
+=======
 *.py[cod]
 *$py.class
 
@@ -9,6 +9,7 @@ source/__pycache__/
 
 # Distribution / packaging
 flaskvenv/
+=======
 .Python
 env/
 build/
@@ -59,3 +60,7 @@ docs/_build/
 
 # PyBuilder
 target/
+=======
+
+#Ipython Notebook
+.ipynb_checkpoints
